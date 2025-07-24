@@ -15,9 +15,8 @@
 
 /* Navigation */
 .navigation {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(220, 38, 38, 0.3);
+  background: #fff;
+  border-bottom: 1px solid #e3e8f0;
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -35,10 +34,10 @@
 
 .nav-brand h1 {
   margin: 0;
-  color: #dc2626;
+  color: #1a237e;
   font-size: 1.5rem;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
 }
 
 .nav-user {
@@ -48,28 +47,28 @@
 }
 
 .user-name {
-  color: #ffffff;
-  font-size: 0.9rem;
+  color: #1a237e;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
 .logout-button {
-  background-color: #dc2626;
-  color: white;
+  background-color: #3b82f6;
+  color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
 }
 
 .logout-button:hover {
-  background-color: #b91c1c;
+  background-color: #2563eb;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.18);
 }
 
 /* Login Form */
@@ -81,27 +80,26 @@
 }
 
 .login-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(220, 38, 38, 0.2);
+  background: #fff;
+  border: 1px solid #e3e8f0;
   border-radius: 16px;
   padding: 3rem;
   width: 100%;
   max-width: 450px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(26, 35, 126, 0.08);
 }
 
 .login-card h2 {
+  color: #1a237e;
   margin: 0 0 1rem 0;
-  color: #1f2937;
   font-size: 2rem;
   font-weight: 700;
 }
 
 .login-card p {
+  color: #374151;
   margin: 0 0 2rem 0;
-  color: #6b7280;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -146,8 +144,8 @@
 }
 
 .login-button {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-  color: white;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #fff;
   border: none;
   padding: 0.875rem 1.5rem;
   border-radius: 8px;
@@ -155,12 +153,12 @@
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.13);
 }
 
 .login-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.18);
 }
 
 .login-button:active {
@@ -172,19 +170,24 @@
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(26, 35, 126, 0.07),
+    0 1.5px 4px rgba(26, 35, 126, 0.04);
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
 }
 
 .welcome-message {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-radius: 16px;
-  padding: 3rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(220, 38, 38, 0.2);
+  background: #f4f6fb;
+  border-radius: 14px;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 12px rgba(26, 35, 126, 0.06);
+  border: 1px solid #e3e8f0;
+  margin-bottom: 2rem;
 }
 
 .welcome-message h1 {
-  color: #1f2937;
+  color: #1a237e;
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 700;
@@ -192,7 +195,7 @@
 
 .user-status {
   color: #374151;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
   font-weight: 500;
 }
