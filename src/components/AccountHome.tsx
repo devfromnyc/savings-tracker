@@ -115,8 +115,10 @@ type Item = {
 
 const AccountHome: React.FC = () => {
   const { user } = useAuth();
+  const storageKey = user ? `recentSavingsItems_${user.name}` : undefined;
   const [items, setItems] = useState<Item[]>(() => {
-    const stored = localStorage.getItem("recentSavingsItems");
+    if (!storageKey) return initialItems;
+    const stored = localStorage.getItem(storageKey);
     if (stored) {
       try {
         const parsed: any[] = JSON.parse(stored);
@@ -155,8 +157,10 @@ const AccountHome: React.FC = () => {
 
   // Sync items to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem("recentSavingsItems", JSON.stringify(items));
-  }, [items]);
+    if (storageKey) {
+      localStorage.setItem(storageKey, JSON.stringify(items));
+    }
+  }, [items, storageKey]);
 
   // Add new item
   const handleCreate = (e: React.FormEvent) => {

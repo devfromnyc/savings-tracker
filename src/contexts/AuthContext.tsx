@@ -3,11 +3,12 @@ import type { ReactNode } from "react";
 
 interface User {
   name: string;
+  password: string;
 }
 
 interface AuthContextType {
   user: User | null;
-  login: (name: string) => void;
+  login: (name: string, password: string) => void;
   logout: () => void;
   isAuthenticated: boolean;
 }
@@ -29,8 +30,8 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
 
-  const login = (name: string) => {
-    setUser({ name });
+  const login = (name: string, password: string) => {
+    setUser({ name, password });
   };
 
   const logout = () => {
